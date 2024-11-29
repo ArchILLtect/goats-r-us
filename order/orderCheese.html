@@ -1,95 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Goats 'R Us - Order Goat Cheese</title>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="../css/styles.css">
-    </head>
+<head>
+    <title>Goats 'R Us - Order Goat Cheese</title>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="We have been raising goats for over 20 years and have the best.....">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arima&display=swap"
+        rel="stylesheet">
+</head>
 
-    <body>
+<body>
 
-        <header>
-            <h1>Goats 'R Us</h1>
-        </header>
+    <header>
+        <h1>Goats 'R Us</h1>
+    </header>
 
-        <main>
-            <section>
-                <h2>Cheese Order Form</h2>
-                <p>Please fill out the below form to receive handmade cheese crafted by our family!</p>
-                <form action="http://itins3.madisoncollege.edu/echo.php" method="post">
-                    <fieldset>
-                        <legend>Your Details</legend>
-                        <label>First Name</label>
-                        <input type="text" name="firstName">
+    <main>
+        <section>
+            <h2>Cheese Order Form</h2>
+            <p>Please fill out the below form to receive handmade cheese crafted
+                by our family!</p>
+            <form action="http://itins3.madisoncollege.edu/echo.php"
+                method="post">
+                <fieldset>
+                    <legend>Your Details</legend>
+                    <label>First Name</label>
+                    <input type="text" name="firstName">
 
-                        <label>Last Name</label>
-                        <input type="text" name="lastName">
+                    <label>Last Name</label>
+                    <input type="text" name="lastName">
 
-                        <label>Email Address</label>
-                        <input type="email" name="email">
+                    <label>Email Address</label>
+                    <input type="email" name="email">
 
-                        <label>Phone Number</label>
-                        <input type="text" name="phoneNumber">
-                        <p class="helpText">Phone number must be 10 digits and include dashes.</p>
+                    <label>Phone Number</label>
+                    <input type="text" name="phoneNumber">
+                    <p class="helpText">Phone number must be 10 digits and
+                        include dashes.</p>
 
-                        <label>City</label>
-                        <input type="text" name="city">
+                    <label>City</label>
+                    <input type="text" name="city">
 
-                        <label for="pickState">Choose a state</label>
-                        <select name="pickState">
-                            <option value="00">--select--</option>
-                            <option value="01">Illnois</option>
-                            <option value="02">Wisconsin</option>
-                            <option value="03">Michigan</option>
-                            <option value="04">Minnesota</option>
-                        </select>
+                    <label for="pickState">Choose a state</label>
+                    <select name="pickState">
+                        <option value="00">--select--</option>
+                        <option value="01">Illnois</option>
+                        <option value="02">Wisconsin</option>
+                        <option value="03">Michigan</option>
+                        <option value="04">Minnesota</option>
+                    </select>
 
-                        <label>Zip</label>
-                        <input type="text" name="zip">
-                    </fieldset>
+                    <label>Zip</label>
+                    <input type="text" name="zip">
+                </fieldset>
 
-                    <fieldset>
-                        <legend>Choose a type of goat cheese</legend>
-                        <input type="checkbox" name="fog">
-                        <label>Humboldt Fog</label>
-                        <br>
+                <fieldset>
+                    <legend>Choose a type of goat cheese</legend>
+                    <input type="checkbox" name="fog">
+                    <label>Humboldt Fog</label>
+                    <br>
 
-                        <input type="checkbox" name="garrotxa">
-                        <label>Garrotxa</label>&nbsp;&nbsp;&nbsp;
-                        <a href="https://www.cheese.com/garrotxa/" target="_blank">
-                            Learn more
-                            <img src="../images/newTabIcon.png" id="newTab" width="13">
-                        </a>
-                        <br>
+                    <input type="checkbox" name="garrotxa">
+                    <label>Garrotxa</label>&nbsp;&nbsp;&nbsp;
+                    <a href="https://www.cheese.com/garrotxa/" target="_blank">
+                        Learn more
+                        <img src="../images/newTabIcon.png" id="newTab"
+                            width="13">
+                    </a>
+                    <br>
 
-                        <input type="checkbox" name="brunet">
-                        <label>Brunet</label>
-                    </fieldset>
+                    <input type="checkbox" name="brunet">
+                    <label>Brunet</label>
+                </fieldset>
 
-                    <fieldset>
-                        <legend>This this a gift?</legend>
-                        <input type="radio" name="gift" id="yesGift" value="yesGift">
-                        <label for="yesGift">Yes</label>
+                <fieldset>
+                    <legend>This this a gift?</legend>
+                    <input type="radio" name="gift" id="yesGift"
+                        value="yesGift">
+                    <label for="yesGift">Yes</label>
 
-                        <input type="radio" name="gift" id="noGift" value="noGift">
-                        <label for="noGift">No</label>
-                    </fieldset>
+                    <input type="radio" name="gift" id="noGift" value="noGift">
+                    <label for="noGift">No</label>
+                </fieldset>
 
-                    <input type="checkbox" name="coupon" value="yesCoupon">
-                    <span>I want to receive coupons and special offers.</span>
+                <input type="checkbox" name="coupon" value="yesCoupon">
+                <span>I want to receive coupons and special offers.</span>
 
-                    <div class="formButtons">
-                        <input type="submit" value="Place Order">
-                        <input type="reset" value="Start Over">
-                    </div>
-                </form>
+                <div class="formButtons">
+                    <input type="submit" value="Place Order">
+                    <input type="reset" value="Start Over">
+                </div>
+            </form>
 
-            </section>
-        </main>
+        </section>
+    </main>
 
-        <footer>
-            <p>&copy; Goats 'R Us 2019</p>
-        </footer>
+    <footer>
+        <p>&copy; Goats 'R Us 2019</p>
+    </footer>
 
-    </body>
+</body>
 </html>

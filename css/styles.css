@@ -29,11 +29,14 @@ header {
 }
 
 h1 {
+    font-family: 'Arima', cursive;
     font-size: 3em;
     text-align: center;
+    font-weight: 700;
 }
 
 h2 {
+    font-family: 'Arima', cursive;
     font-size: 2em;
     margin: .5em 0;
 }
@@ -57,6 +60,24 @@ img {
     border: 1px solid #e3e3e5;
     margin: 0 auto;
     display: block;
+}
+
+a {
+    color: #A4665E;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+a:hover {
+    color: #AAA9AD;
+}
+
+a img {
+    transition: background-color 0.5s;
+}
+
+a img:hover {
+    background-color: #A4665E;
 }
 
 /******************
@@ -139,4 +160,22 @@ input[type="reset"]:hover{
     background-color: #fff;
     color: #777;
     transition: .5s;
+}
+
+/* Sticky Footer */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto; /* flex-grow, flex-shrink, flex-bais */
+}
+
+footer {
+    flex-shrink: 0;
 }
