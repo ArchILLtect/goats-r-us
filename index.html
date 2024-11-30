@@ -13,11 +13,32 @@
 </head>
 
 <body>
+    <a href="#mainContent" class="skipLink">Skip Link</a>
     <header>
         <h1>Goats 'R Us</h1>
+        <nav aria-label="Main Menu">
+            <ul role="menubar">
+                <li role="none"><a href="index.html" aria-current="page"
+                        role="menuitem">Home</a>
+                </li>
+                <li role="none"><a href="breeds.html" role="menuitem">Our
+                        Breeds</a></li>
+                <li role="none"><a href="products.html" role="menuitem"
+                        aria-haspopup="true">Order Products</a>
+                    <ul aria-label="Product Sub-Menu" role="menu">
+                        <li role="none"><a href="#" role="menuitem">Goat Milk
+                                Soap</a></li>
+                        <li role="none"><a href="order/orderCheese.html"
+                                role="menuitem">Cheese</a></li>
+                        <li role="none"><a href="#" role="menuitem">Milk</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
+    <main id="mainContent">
         <img src="images/goatFarm.jpeg" alt="Goats in a field">
 
         <article>

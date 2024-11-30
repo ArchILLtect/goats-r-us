@@ -80,6 +80,16 @@ a img:hover {
     background-color: #A4665E;
 }
 
+.skipLink {
+    position: absolute;
+    left: -1000px;
+}
+
+.skipLink:focus,
+.skipLink:active {
+    left: 0;
+}
+
 /******************
     Footer
 ******************/
@@ -93,6 +103,24 @@ footer p {
     text-align: right;
     margin: 0 1em;
     padding-top: .2em;
+}
+
+/* Sticky Footer */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto; /* flex-grow, flex-shrink, flex-bais */
+}
+
+footer {
+    flex-shrink: 0;
 }
 
 /******************
@@ -162,20 +190,78 @@ input[type="reset"]:hover{
     transition: .5s;
 }
 
-/* Sticky Footer */
-html, body {
-    height: 100%;
+/*************************
+  Main menu
+*************************/
+nav {
+    background-color: #e3e3e5;
+}
+  
+ul {
+    display: flex; /* Acts like a float */
+    list-style: none;
+    justify-content: center;
+}
+  
+li {
+    background-color: #e3e3e5;
+    position: relative;
+    transition-duration: 0.5s;
+}
+  
+li:hover {
+    background-color: #A4665E;
+}
+  
+li a {
+    text-decoration: none;
+    color: #000;
+    display: block; /* need anchor element to be block so they take padding */
+    padding: 1em;
+}
+  
+li a:hover {
+    color: #fff;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
+li a:hover, li a:focus {
+    color: #fff;
+    background-color: #A4665E;
+    transition: background-color 0.5s, color 0.5s;
 }
 
-main {
-    flex: 1 0 auto; /* flex-grow, flex-shrink, flex-bais */
+a[aria-current="page"] {
+    font-weight: bold;
+    color: #fff;
+    background-color: #A4665E;              
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+/*************************
+  Sub menu
+*************************/
+
+ul li ul {
+    position: absolute;
+    min-width: 10.3em;
+    margin-top: 0;
+    left: 0;
+    display: none;
 }
 
-footer {
-    flex-shrink: 0;
+ul li:hover ul,
+ul li ul:hover,
+ul li:focus-within ul {
+    display: block;
 }
+
+li ul li:last-child {
+    border-bottom-left-radius: .5em;
+    border-bottom-right-radius: .5em;
+}
+
+ul li:focus-within ul {
+    display: block;
+}
+
