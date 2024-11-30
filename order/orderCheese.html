@@ -47,53 +47,61 @@
                 method="post">
                 <fieldset>
                     <legend>Your Details</legend>
+                    <p class="helpText">**All fields in this section
+                        are required.**</p>
                     <label for="firstName">First Name</label>
-                    <input id="firstName" type="text" name="firstName">
+                    <input id="firstName" type="text" name="firstName" required>
 
-                    <label>Last Name</label>
-                    <input id="lastName" type="text" name="lastName">
+                    <label for="lastName">Last Name</label>
+                    <input id="lastName" type="text" name="lastName" required>
 
-                    <label>Email Address</label>
-                    <input id="email" type="email" name="email">
+                    <label for="email">Email Address</label>
+                    <input id="email" type="email" name="email" required>
 
-                    <label>Phone Number</label>
-                    <input id="phoneNumber" type="text" name="phoneNumber">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input id="phoneNumber" type="text" name="phoneNumber"
+                        required>
                     <p class="helpText">Phone number must be 10 digits and
                         include dashes.</p>
 
-                    <label>City</label>
-                    <input id="city" type="text" name="city">
+                    <label for="city">City</label>
+                    <input id="city" type="text" name="city" required>
 
                     <label for="pickState">Choose a state</label>
-                    <select id="pickState" name="pickState">
-                        <option value="00">--select--</option>
+                    <select id="pickState" name="pickState" required>
+                        <option value="">--select--</option>
+                        <!-- Had to set a value to 'empty' after adding required parameter -->
                         <option value="01">Illnois</option>
                         <option value="02">Wisconsin</option>
                         <option value="03">Michigan</option>
                         <option value="04">Minnesota</option>
                     </select>
 
-                    <label>Zip</label>
-                    <input id="zip" type="text" name="zip">
+                    <label for="zip">Zip</label>
+                    <input id="zip" type="text" name="zip" required>
+
                 </fieldset>
 
                 <fieldset>
                     <legend>Choose a type of goat cheese</legend>
                     <input id="fog" type="checkbox" name="fog">
-                    <label>Humboldt Fog</label>
+                    <label for="fog">Humboldt Fog</label>
                     <br>
 
                     <input id="garrotxa" type="checkbox" name="garrotxa">
-                    <label>Garrotxa</label>&nbsp;&nbsp;&nbsp;
-                    <a href="https://www.cheese.com/garrotxa/" target="_blank">
+                    <label for="garrotxa">Garrotxa</label>&nbsp;&nbsp;&nbsp;
+                    <a href="https://www.cheese.com/garrotxa/"
+                        aria-label="Learn more about garrotxa cheese (opens in new tab)"
+                        target="_blank" rel="noopener noreferrer">
                         Learn more
-                        <img src="../images/newTabIcon.png"
-                            alt="Open in new tab icon" id="newTab" width="13">
+                        <img src="../images/newTabIcon.png" alt="" id="newTab"
+                            width="13">
+                        <!-- alt text is blank here to reduce redundancy from corresponding aria-label-->
                     </a>
                     <br>
 
                     <input id="brunet" type="checkbox" name="brunet">
-                    <label>Brunet</label>
+                    <label for="brunet">Brunet</label>
                 </fieldset>
 
                 <fieldset>
@@ -108,7 +116,8 @@
 
                 <input id="coupon" type="checkbox" name="coupon"
                     value="yesCoupon">
-                <span>I want to receive coupons and special offers.</span>
+                <label for="coupon">I want to receive coupons and special
+                    offers.</label>
 
                 <div class="formButtons">
                     <input type="submit" value="Place Order">

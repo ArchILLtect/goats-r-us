@@ -68,6 +68,22 @@ a {
     transition: color 0.5s;
 }
 
+a:focus {
+    outline: 2px solid #A4665E;
+}
+
+input {
+    outline-color: #A4665E;
+}
+
+input[type="checkbox"]:focus {
+    outline: 2px solid #A4665E;
+}
+
+input, input[type="radio"]:focus, select {
+    outline-color: #A4665E;
+}
+
 a:hover {
     color: #AAA9AD;
 }
@@ -177,6 +193,7 @@ input[type="reset"] {
 input[type="submit"] {
     margin-right: 2em;
     background-color: #A4665E;
+    outline-color: #000;
     color: #fff;
 }
 input[type="reset"] {
