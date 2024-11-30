@@ -13,12 +13,32 @@
 </head>
 
 <body>
-
+    <a href="#mainContent" class="skipLink">Skip Link</a>
     <header>
         <h1>Goats 'R Us</h1>
+        <nav aria-label="Main Menu">
+            <ul role="menubar">
+                <li role="none"><a href="../index.html" role="menuitem">Home</a>
+                </li>
+                <li role="none"><a href="../breeds.html" role="menuitem">Our
+                        Breeds</a></li>
+                <li role="none"><a href="../products.html" role="menuitem"
+                        aria-haspopup="true">Order Products</a>
+                    <ul aria-label="Product Sub-Menu" role="menu">
+                        <li role="none"><a href="#" role="menuitem">Goat Milk
+                                Soap</a></li>
+                        <li role="none"><a href="order/orderCheese.html"
+                                aria-current="page" role="menuitem">Cheese</a>
+                        </li>
+                        <li role="none"><a href="#" role="menuitem">Milk</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
+    <main id="mainContent">
         <section>
             <h2>Cheese Order Form</h2>
             <p>Please fill out the below form to receive handmade cheese crafted
@@ -27,25 +47,25 @@
                 method="post">
                 <fieldset>
                     <legend>Your Details</legend>
-                    <label>First Name</label>
-                    <input type="text" name="firstName">
+                    <label for="firstName">First Name</label>
+                    <input id="firstName" type="text" name="firstName">
 
                     <label>Last Name</label>
-                    <input type="text" name="lastName">
+                    <input id="lastName" type="text" name="lastName">
 
                     <label>Email Address</label>
-                    <input type="email" name="email">
+                    <input id="email" type="email" name="email">
 
                     <label>Phone Number</label>
-                    <input type="text" name="phoneNumber">
+                    <input id="phoneNumber" type="text" name="phoneNumber">
                     <p class="helpText">Phone number must be 10 digits and
                         include dashes.</p>
 
                     <label>City</label>
-                    <input type="text" name="city">
+                    <input id="city" type="text" name="city">
 
                     <label for="pickState">Choose a state</label>
-                    <select name="pickState">
+                    <select id="pickState" name="pickState">
                         <option value="00">--select--</option>
                         <option value="01">Illnois</option>
                         <option value="02">Wisconsin</option>
@@ -54,25 +74,25 @@
                     </select>
 
                     <label>Zip</label>
-                    <input type="text" name="zip">
+                    <input id="zip" type="text" name="zip">
                 </fieldset>
 
                 <fieldset>
                     <legend>Choose a type of goat cheese</legend>
-                    <input type="checkbox" name="fog">
+                    <input id="fog" type="checkbox" name="fog">
                     <label>Humboldt Fog</label>
                     <br>
 
-                    <input type="checkbox" name="garrotxa">
+                    <input id="garrotxa" type="checkbox" name="garrotxa">
                     <label>Garrotxa</label>&nbsp;&nbsp;&nbsp;
                     <a href="https://www.cheese.com/garrotxa/" target="_blank">
                         Learn more
-                        <img src="../images/newTabIcon.png" id="newTab"
-                            width="13">
+                        <img src="../images/newTabIcon.png"
+                            alt="Open in new tab icon" id="newTab" width="13">
                     </a>
                     <br>
 
-                    <input type="checkbox" name="brunet">
+                    <input id="brunet" type="checkbox" name="brunet">
                     <label>Brunet</label>
                 </fieldset>
 
@@ -86,7 +106,8 @@
                     <label for="noGift">No</label>
                 </fieldset>
 
-                <input type="checkbox" name="coupon" value="yesCoupon">
+                <input id="coupon" type="checkbox" name="coupon"
+                    value="yesCoupon">
                 <span>I want to receive coupons and special offers.</span>
 
                 <div class="formButtons">
